@@ -1,0 +1,271 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.card__wrapper {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.card__wrapper .card {
+  width: 23%;
+  box-shadow: 0 0 8px gray;
+  padding: 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex-wrap: wrap;
+  border-radius: 10px;
+  color: black;
+}
+@media (max-width: 600px) {
+  .card__wrapper .card {
+    width: 48%;
+  }
+}
+.card__wrapper .card img {
+  width: 100%;
+  height: 250px;
+}
+
+button {
+  width: 100px;
+  height: 30px;
+  border-radius: 10px;
+  border: none;
+  background-color: lightseagreen;
+  color: white;
+  font-weight: bolder;
+  cursor: pointer;
+  margin: auto;
+}
+
+.modal {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(114, 95, 95, 0.445);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  color: black;
+}
+
+.modal .modal__wrapper {
+  max-width: 600px;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 20px;
+  box-shadow: 0 0 8px gray;
+  text-align: center;
+  color: black;
+}
+
+.modal.active {
+  display: flex;
+}
+
+.modal .modal__wrapper img {
+  width: 100%;
+  height: 400px;
+}
+
+header {
+  width: 100%;
+  background-color: rgb(232, 220, 220);
+  padding: 1rem;
+}
+header nav {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+header ul {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  list-style: none;
+}
+header ul li a {
+  color: black;
+  padding: 12px 24px;
+  display: inline-block;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 130px;
+  border-radius: 8px;
+}
+header ul a:hover {
+  background-color: rgb(170, 156, 156);
+}
+header li .logo {
+  font-size: 26px;
+  font-weight: bolder;
+}
+header nav .hamburger {
+  display: none;
+}
+@media (max-width: 600px) {
+  header nav .hamburger {
+    display: flex;
+  }
+  header nav .list__item {
+    display: none;
+  }
+}
+
+header .menu {
+  padding: 0 20px;
+  display: none;
+}
+header .menu a {
+  display: block;
+  padding: 5px;
+}
+
+.menu li a:hover {
+  background-color: rgb(170, 156, 156);
+}
+
+.menu.active {
+  display: block;
+}
+
+section {
+  width: 100%;
+  background-color: black;
+  padding: 25px;
+  border-radius: 20px;
+}
+section .section__wrapper {
+  max-width: 1200px;
+  margin: auto;
+}
+section .card {
+  width: 200px;
+  position: relative;
+}
+section .card img {
+  width: 100%;
+  margin: auto;
+  margin: left;
+}
+section .card__text {
+  color: white;
+  width: 40%;
+  padding: 2rem;
+  font-size: 26px;
+}
+
+p {
+  color: #000;
+}
+@media screen and (prefers-color-scheme: dark) {
+  p {
+    color: #fff;
+  }
+}
+
+@media screen and (prefers-color-scheme: light) {
+  p {
+    color: #000;
+  }
+}
+@media screen and (prefers-color-scheme: dark) {
+  p {
+    color: #fff;
+  }
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  min-height: 100vh;
+  margin: 0;
+  transition: background 0.2s linear;
+}
+
+body.dark {
+  background-color: #000;
+} /* #9b59b6 */
+body.dark h1, body.dark .support a {
+  color: #fff;
+}
+
+.checkbox {
+  opacity: 0;
+  position: absolute;
+}
+
+.checkbox-label {
+  background-color: #000;
+  width: 50px;
+  height: 26px;
+  border-radius: 50px;
+  position: relative;
+  padding: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fa-moon {
+  color: #f1c40f;
+}
+
+.fa-sun {
+  color: #f39c12;
+}
+
+.checkbox-label .ball {
+  background-color: #fff;
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  border-radius: 50%;
+  transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .checkbox-label .ball {
+  transform: translateX(24px);
+}
+
+/*  Support me if you like it */
+.support {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+}
+
+.support a {
+  color: #292c35;
+  font-size: 32px;
+  backface-visibility: hidden;
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+.support a:hover {
+  transform: scale(1.1);
+}/*# sourceMappingURL=style.css.map */
